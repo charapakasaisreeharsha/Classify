@@ -9,3 +9,6 @@ HTML Template (index.html)
 Flask Application (app.py)
 The Flask application handles the web server functionality, including routes for uploading images and displaying predictions.
 
+![Screenshot 2024-05-31 001242](h![Screenshot 2024-05-31 001318](https://github.com/charapakasaisreeharsha/Classify/assets/142214147/d22d6ebf-9fa5-4fbc-841e-18e8cd4cc42b)
+ttps://github.com/charapakasaisreeharsha/Classify/assets/142214147/8ee669ec-104e-43dd-a324-2e6febcd433f)
+
