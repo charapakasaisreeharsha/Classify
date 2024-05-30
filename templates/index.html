@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classify!!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .input-file {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .prediction {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .uploaded-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image classifier</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input class="input-file" type="file" name="imagefile">
+            <input class="btn" type="submit" value="Predict Image">
+        </form>
+
+        {% if prediction and image_path %}
+            <img src="{{ image_path }}" alt="Uploaded Image" class="uploaded-image">
+            <p class="prediction">Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
